@@ -40,3 +40,7 @@ UiFoundation intentionally contains **no concrete UI implementations**, **no tem
 
 UiFoundation is intended to be a long-lived, low-level dependency that higher-level UI layers can safely build upon.
 
+
+## Chatbot display contract
+
+`UiFoundation\Api\IChatbotDisplay` defines the replaceable browser presentation slot for chatbot clients. Chatbot domain plugins prepare the browser-facing configuration and delegate rendering through this interface. UI implementation plugins own their templates, assets, and client initialization.
