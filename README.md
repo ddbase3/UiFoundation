@@ -49,3 +49,7 @@ UiFoundation is intended to be a long-lived, low-level dependency that higher-le
 
 - [Frequently Asked Questions](docs/faq.md)
 - [Privacy and data processing](PRIVACY.md)
+
+## Authorization audience administration backend
+
+`IAuthorizationAudienceAdministrationService` is an optional UI-facing port for the two reusable ClientStack administration displays. It does not define a new authorization authority or a second rights store. Each host owns data, validates rows, authorizes actual actions and persists its own groups and feature audience expressions.

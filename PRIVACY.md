@@ -200,3 +200,7 @@ Implementations of UiFoundation contracts should document and test, as applicabl
 - retention and deletion of any persisted UI state
 
 UiFoundation provides stable UI contracts only. It does not replace the privacy, security, and accessibility responsibilities of the concrete implementation or host application.
+
+## Authorization administration UI refactor
+
+The shared ClientStack screens do not create another persistence layer. ILIAS group identifiers, user and role criterion IDs, and feature audience expressions continue to be processed and stored solely by the configured ILIAS host services. Access is checked server-side; POST mutations require a session CSRF token. The new UiFoundation interface provides no storage. Retention and erasure continue to follow the host settings backend as previously documented.
