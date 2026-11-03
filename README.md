@@ -53,3 +53,23 @@ UiFoundation is intended to be a long-lived, low-level dependency that higher-le
 ## Authorization audience administration backend
 
 `IAuthorizationAudienceAdministrationService` is an optional UI-facing port for the two reusable ClientStack administration displays. It does not define a new authorization authority or a second rights store. Each host owns data, validates rows, authorizes actual actions and persists its own groups and feature audience expressions.
+
+## Discoverable settings tabs
+
+`UiFoundation\Api\ISettingsTab` declares navigation contributions, discovered using
+`IClassMap`. Root entries return `null` for their parent and display. Child entries
+reference a root via `getParentTabName()` and a real `IDisplay::getName()`.
+`getDisplayData()` supplies trusted static display configuration; `getOrder()`
+sorts siblings. `getLabel()` and `getDescription()` return translated text.
+
+`UiFoundation\Settings\AbstractSettingsTab` supplies optional shared metadata and
+translation behavior. `AbstractFeatureSettingsTab` additionally implements
+`IFeature`; its permission is `feature/<tab getName()>`, with default group
+`administration`, and `isVisible()` evaluates the existing
+`IAuthorizationService`. An implementation can override its declared audience,
+for example for a user-owned credentials page. Neither type implements an ACL,
+changes native permissions, or grants access to the underlying display.
+
+Every concrete tab, feature declaration, and visible translation belongs to the
+plugin offering that setting. A contributed tab must be enforced by the display
+and all of its action endpoints as well as the navigation.
