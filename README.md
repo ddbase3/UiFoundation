@@ -73,3 +73,7 @@ changes native permissions, or grants access to the underlying display.
 Every concrete tab, feature declaration, and visible translation belongs to the
 plugin offering that setting. A contributed tab must be enforced by the display
 and all of its action endpoints as well as the navigation.
+
+## Feature authorization reuse
+
+The shared feature-enabled Settings base makes its injected `IAuthorizationService` available to specialized subclasses through a protected readonly property. This allows an individual tab to require additional existing permissions without implementing a parallel authorization service. No new feature policy or storage responsibility is introduced in UiFoundation.

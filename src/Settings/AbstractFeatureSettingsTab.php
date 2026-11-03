@@ -18,7 +18,7 @@ abstract class AbstractFeatureSettingsTab extends AbstractSettingsTab implements
 
 	public function __construct(
 		ITranslation $translation,
-		private readonly IAuthorizationService $authorization
+		protected readonly IAuthorizationService $authorization
 	) {
 		parent::__construct($translation);
 	}
