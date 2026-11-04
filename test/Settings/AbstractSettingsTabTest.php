@@ -58,3 +58,5 @@ final class AbstractSettingsTabTest extends TestCase {
 		$this->assertSame('', $tab->getDescription());
 	}
 }
+
+require_once __DIR__ . '/SettingsTabFixture.php';

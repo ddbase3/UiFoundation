@@ -122,3 +122,5 @@ final class AbstractFeatureSettingsTabTest extends TestCase {
 		return new FeatureSettingsTabFixture($this->createStub(ITranslation::class), $authorization);
 	}
 }
+
+require_once __DIR__ . '/FeatureSettingsTabFixture.php';
