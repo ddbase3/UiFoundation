@@ -15,7 +15,7 @@ final class SettingsAdministrationAccess {
 	 * A missing, denied or indeterminate decision never authorizes access.
 	 *
 	 * @param IAuthorizationService $authorization The owning host authorization service.
-	 * @param string $featureName Name of the IFeature-backed ISettingsTab.
+	 * @param string $featureName Name of the discoverable IFeature protecting the operation.
 	 * @return bool True only if both permissions are explicitly allowed.
 	 */
 	public static function isAllowed(IAuthorizationService $authorization, string $featureName): bool {
