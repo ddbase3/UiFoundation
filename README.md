@@ -77,3 +77,8 @@ and all of its action endpoints as well as the navigation.
 ## Feature authorization reuse
 
 The shared feature-enabled Settings base makes its injected `IAuthorizationService` available to specialized subclasses through a protected readonly property. This allows an individual tab to require additional existing permissions without implementing a parallel authorization service. No new feature policy or storage responsibility is introduced in UiFoundation.
+
+
+## Protected administration entries
+
+`AbstractAdministrationSettingsTab` extends the existing feature-backed tab contract and requires an explicit native `system/admin` decision as well as its own feature grant. `SettingsAdministrationAccess` is a small reusable caller of the existing `IAuthorizationService`, not an additional authorization authority, storage or policy evaluator. Displays must check access independently of navigation.

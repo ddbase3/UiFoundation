@@ -212,3 +212,7 @@ store user data. The feature tab helper delegates the current user's feature
 access decision to the active `IAuthorizationService`. It does not persist
 permission grants, modify host roles or authorize the referenced operation.
 Concrete plugins own their display processing and security evidence.
+
+### Settings integration (November 2026)
+
+The administrative settings helper asks the existing IAuthorizationService for native administrator and feature decisions. It stores no permissions, tokens or user data.
