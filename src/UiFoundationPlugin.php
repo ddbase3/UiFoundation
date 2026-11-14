@@ -15,10 +15,10 @@
  * https://github.com/ddbase3/UiFoundation
  **********************************************************************/
 
-namespace UiFoundation;
+namespace Base3\UiFoundation;
 
-use Base3\Api\IContainer;
-use Base3\Api\IPlugin;
+use Base3\CoreFoundation\Api\IContainer;
+use Base3\CoreFoundation\Api\IPlugin;
 
 class UiFoundationPlugin implements IPlugin {
 

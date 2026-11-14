@@ -43,7 +43,7 @@ UiFoundation is intended to be a long-lived, low-level dependency that higher-le
 
 ## Chatbot display contract
 
-`UiFoundation\Api\IChatbotDisplay` defines the replaceable browser presentation slot for chatbot clients. Chatbot domain plugins prepare the browser-facing configuration and delegate rendering through this interface. UI implementation plugins own their templates, assets, and client initialization.
+`Base3\UiFoundation\Api\IChatbotDisplay` defines the replaceable browser presentation slot for chatbot clients. Chatbot domain plugins prepare the browser-facing configuration and delegate rendering through this interface. UI implementation plugins own their templates, assets, and client initialization.
 
 ## Documentation
 
@@ -56,13 +56,13 @@ UiFoundation is intended to be a long-lived, low-level dependency that higher-le
 
 ## Discoverable settings tabs
 
-`UiFoundation\Api\ISettingsTab` declares navigation contributions, discovered using
+`Base3\UiFoundation\Api\ISettingsTab` declares navigation contributions, discovered using
 `IClassMap`. Root entries return `null` for their parent and display. Child entries
 reference a root via `getParentTabName()` and a real `IDisplay::getName()`.
 `getDisplayData()` supplies trusted static display configuration; `getOrder()`
 sorts siblings. `getLabel()` and `getDescription()` return translated text.
 
-`UiFoundation\Settings\AbstractSettingsTab` supplies optional shared metadata and
+`Base3\UiFoundation\Settings\AbstractSettingsTab` supplies optional shared metadata and
 translation behavior. `AbstractFeatureSettingsTab` additionally implements
 `IFeature`; its permission is `feature/<tab getName()>`, with default group
 `administration`, and `isVisible()` evaluates the existing

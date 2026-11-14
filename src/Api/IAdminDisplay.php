@@ -15,9 +15,9 @@
  * https://github.com/ddbase3/UiFoundation
  **********************************************************************/
 
-namespace UiFoundation\Api;
+namespace Base3\UiFoundation\Api;
 
-use Base3\Api\IDisplay;
+use Base3\CoreFoundation\Api\IDisplay;
 
 interface IAdminDisplay extends IDisplay {
 }

@@ -1,8 +1,23 @@
 <?php declare(strict_types=1);
 
-namespace UiFoundation\Api;
+/***********************************************************************
+ * This file is part of UiFoundation for BASE3 Framework.
+ *
+ * UiFoundation extends the BASE3 framework with a shared API
+ * foundation for user interface semantics and contracts.
+ * It provides reusable, framework-agnostic UI interfaces.
+ *
+ * Developed by Daniel Dahme
+ * Licensed under GPL-3.0
+ * https://www.gnu.org/licenses/gpl-3.0.en.html
+ *
+ * https://base3.de/v/uifoundation
+ * https://github.com/ddbase3/UiFoundation
+ **********************************************************************/
 
-use Base3\Api\IBase;
+namespace Base3\UiFoundation\Api;
+
+use Base3\CoreFoundation\Api\IBase;
 
 /**
  * A discoverable, uniquely named entry in the two-level BASE3 settings navigation.

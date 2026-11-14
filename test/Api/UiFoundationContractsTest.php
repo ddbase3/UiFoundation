@@ -1,16 +1,31 @@
 <?php declare(strict_types=1);
 
-namespace UiFoundation\Test\Api;
+/***********************************************************************
+ * This file is part of UiFoundation for BASE3 Framework.
+ *
+ * UiFoundation extends the BASE3 framework with a shared API
+ * foundation for user interface semantics and contracts.
+ * It provides reusable, framework-agnostic UI interfaces.
+ *
+ * Developed by Daniel Dahme
+ * Licensed under GPL-3.0
+ * https://www.gnu.org/licenses/gpl-3.0.en.html
+ *
+ * https://base3.de/v/uifoundation
+ * https://github.com/ddbase3/UiFoundation
+ **********************************************************************/
 
-use Base3\Api\IBase;
-use Base3\Api\IDisplay;
+namespace Base3\UiFoundation\Test\Api;
+
+use Base3\CoreFoundation\Api\IBase;
+use Base3\CoreFoundation\Api\IDisplay;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
-use UiFoundation\Api\IAdminDisplay;
-use UiFoundation\Api\IAuthorizationAudienceAdministrationService;
-use UiFoundation\Api\IChatbotDisplay;
-use UiFoundation\Api\IRichTextEditorDisplay;
-use UiFoundation\Api\ISettingsTab;
+use Base3\UiFoundation\Api\IAdminDisplay;
+use Base3\UiFoundation\Api\IAuthorizationAudienceAdministrationService;
+use Base3\UiFoundation\Api\IChatbotDisplay;
+use Base3\UiFoundation\Api\IRichTextEditorDisplay;
+use Base3\UiFoundation\Api\ISettingsTab;
 
 final class UiFoundationContractsTest extends TestCase {
 
