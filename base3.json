@@ -2,7 +2,7 @@
 	"manifestVersion": 1,
 	"name": "UiFoundation",
 	"namespace": "Base3\\UiFoundation",
-	"version": "4.3.0",
+	"version": "5.0.0",
 	"description": "Framework-agnostic UI semantics and shared UI contracts for BASE3.",
 	"license": "GPL-3.0-or-later",
 	"maintainers": [
@@ -14,6 +14,6 @@
 	],
 	"repository": "https://github.com/ddbase3/UiFoundation",
 	"dependencies": {
-		"CoreFoundation": ">=4.10.0"
+		"CoreFoundation": ">=5.0.0"
 	}
 }
